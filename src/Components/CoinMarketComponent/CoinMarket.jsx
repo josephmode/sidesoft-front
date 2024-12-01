@@ -8,7 +8,7 @@ export const CoinMarket = (req, res) => {
 
 
     const getData = async () => {
-        const url = "http://sidesoft-test.ddns.net:3001/";
+        const url = "https://sidesoft-test.ddns.net:3001/";
         try {
             const respuesta = await fetch(url);
             if (!respuesta.ok) {
