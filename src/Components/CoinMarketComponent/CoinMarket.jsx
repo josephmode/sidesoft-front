@@ -50,11 +50,7 @@ export const CoinMarket = (req, res) => {
             <div>
             <h1  style={{textAlign:'center'}}>CoinMarket</h1>
             </div>
-
-            <br />
             <div >
-                <br />
-                <br />
             <table id="myTable" className="table table-dark" style={{display: 'auto'}}>
                 <thead>
                     <tr>
