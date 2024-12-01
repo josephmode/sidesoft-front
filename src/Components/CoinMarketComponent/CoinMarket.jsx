@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import $ from 'jquery';
 import DataTable from 'datatables.net-dt';
 
 export const CoinMarket = (req, res) => {
@@ -27,10 +28,6 @@ export const CoinMarket = (req, res) => {
     useEffect(() => {
         getData();
     }, []);
-
-    let table = new DataTable('#myTable', {
-        "bDestroy": true,
-    });
     
 
     if (loading) {
@@ -40,6 +37,10 @@ export const CoinMarket = (req, res) => {
     if (error) {
         return <div>Error: {error}</div>;
     }
+
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
 
 
     return (
@@ -51,7 +52,7 @@ export const CoinMarket = (req, res) => {
             </div>
 
             <br />
-            <div style={{backgroundColor: '#212529', color: 'white'}}>
+            <div >
                 <br />
                 <br />
             <table id="myTable" className="table table-dark" style={{display: 'auto'}}>
